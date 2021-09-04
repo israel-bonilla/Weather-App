@@ -69,7 +69,7 @@ function App() {
 
   return (
     <div className="flex flex-col items-center bg-gray-900 h-[100vh] w-full">
-      <div className="flex flex-col items-center w-3/4 max-w-5xl bg-gray-600 rounded-2xl p-5 mt-10">
+      <div className="flex flex-col items-center w-3/4 max-w-5xl bg-gray-600 rounded-2xl p-5 mt-10 shadow-xl">
         <Header location={location} />
         <Tabs />
         <Graph />

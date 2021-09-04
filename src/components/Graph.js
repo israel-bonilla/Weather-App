@@ -9,7 +9,7 @@ const Graph = () => {
     const graphMode = useSelector(selectGraphMode);
 
     return (
-        <div className="w-full bg-gray-800 mt-10 rounded-2xl p-5">
+        <div className="w-full bg-gray-800 mt-10 rounded-2xl p-5 shadow-xl">
             {graphMode === "temperature" ? <TemperatureGraph />
             : graphMode === "precipitation" ? <PercipitationGraph />
             : <WindGraph />}

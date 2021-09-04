@@ -19,7 +19,7 @@ const Header = ({ location }) => {
     }
 
     return (
-        <div className="flex w-full justify-between items-center bg-gray-800 rounded-2xl px-5 py-2 text-white">
+        <div className="flex w-full justify-between items-center bg-gray-800 rounded-2xl px-5 py-2 text-white shadow-xl">
             {location.loaded ? (location.coords ? (
             <>
                 <div className="flex items-center">
