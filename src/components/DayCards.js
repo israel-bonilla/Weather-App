@@ -10,7 +10,7 @@ const DayCards = () => {
                 {dailyData.map(({ day, hi, lo, icon }, i) => (
                     <div key={i} className="flex flex-col items-center text-white">
                         <p>{day}</p>
-                        <img src={`http://openweathermap.org/img/wn/${icon}@2x.png`} alt="" />
+                        {icon && <img src={`https://openweathermap.org/img/wn/${icon}@2x.png`} alt="" />}
                         <div className="flex w-full justify-evenly">
                             <p className="text-sm text-gray-300">{hi}°</p>
                             <p className="text-sm font-semibold">{lo}°</p>

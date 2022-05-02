@@ -23,7 +23,7 @@ const Header = ({ location }) => {
             {location.loaded ? (location.coords ? (
             <>
                 <div className="flex items-center">
-                    <img src={`http://openweathermap.org/img/wn/${icon}@2x.png`} alt="" />
+                    {icon && <img src={`https://openweathermap.org/img/wn/${icon}@2x.png`} alt="" />}
                     <h2 className="text-5xl font-semibold px-1">{temp ? Math.round(temp) : "Loading..."}</h2>
                     <div className="flex self-start px-1 pt-2 text-gray-500">
                         <p onClick={changeToImperial}

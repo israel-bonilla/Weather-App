@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { useSelector } from "react-redux";
 import { selectGraphMode } from "../features/appSlice";
 import PercipitationGraph from "./PercipitationGraph";

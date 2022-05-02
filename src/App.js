@@ -64,7 +64,7 @@ function App() {
       })
       .catch(err => console.log(err.message));
     }
-    requestData();
+    if(location.loaded) requestData();
   }, [location, units]);
 
   return (
@@ -75,7 +75,7 @@ function App() {
         <Graph />
         <DayCards />
         <div className="flex w-full justify-end text-gray-300 pt-3 pr-3">
-          <a href="https://openweathermap.org/" target="_blank" className="underline">openweathermap.org</a>
+          <a href="https://openweathermap.org/" rel="noreferrer" target="_blank" className="underline">openweathermap.org</a>
         </div>
       </div>
     </div>
