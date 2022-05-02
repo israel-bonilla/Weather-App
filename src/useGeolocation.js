@@ -28,11 +28,11 @@ const useGeolocation = () => {
     };
 
     const reverseGeocode = async ({ latitude, longitude }) => {
-        await fetch(`http://api.openweathermap.org/geo/1.0/reverse?lat=${latitude}&lon=${longitude}&limit=${1}&appid=${API_KEY}`)
+        await fetch(`http://api.openweathermap.org/geo/1.0/reverse?lat=${latitude}&lon=${longitude}&limit=1&appid=${API_KEY}`)
         .then(res => res.json())
         .then(data => setLocation(prevState => ({
             ...prevState,
-            name: `${data[0].name}, ${data[0].state}`,
+            name: `${data[0].name || ""}, ${data[0].state || ""}`,
         })));
     }
 
@@ -42,9 +42,9 @@ const useGeolocation = () => {
                 code: 0,
                 message: "Geolocation is not supported",
             });
+        } else {
+            navigator.geolocation.getCurrentPosition(onSuccess, onError);
         }
-
-        navigator.geolocation.getCurrentPosition(onSuccess, onError);
     }, []);
 
     return location;
